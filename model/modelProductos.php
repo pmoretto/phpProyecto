@@ -4,8 +4,8 @@
         private $productos;
 
         public function __construct(){
-            require_once("conexion.php");
-            $this->db = conexion::conexion();
+            require_once("model/conexion.php");
+            $this->db = conexion::conectar();
             $this->productos = array();
         }
 

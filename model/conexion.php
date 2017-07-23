@@ -1,8 +1,8 @@
 <?php
     class conexion{
-        public static function conexion(){
+        public static function conectar(){
             try{
-                include ("config.php");
+                include ("model/config.php");
                 $conexion = new PDO("mysql:host=".DB_HOST."; dbname=".DB_NOMBRE."",DB_USUARIO,DB_CONTRA);
                 $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                 $conexion->exec("SET CHARACTER SET ".DB_CHARSET);

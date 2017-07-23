@@ -1,5 +1,6 @@
 <?php
-    require_once("../model/modelProductos.php");
-    require_once("../view/viewProductos.php");
-
+    require_once("model/modelProductos.php");
+    $productos = new modelProductos();
+    $matrizProductos = $productos->getProductos();
+    require_once("view/viewProductos.php");
 ?>
